@@ -1,0 +1,42 @@
+.simulation-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .simulation-container {
+    width: 800px;
+    height: 600px;
+    border: 1px solid #ccc; /* Optional: Add a border around the simulation */
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .buttons-container {
+    margin-top: 16px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .highlight-button,
+  .view-button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4a90e2; /* Button background color */
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .highlight-button:hover,
+  .view-button:hover {
+    background-color: #357ABD; /* Darker shade on hover */
+  }
+  
+  .highlight-button:active,
+  .view-button:active {
+    background-color: #2E4A75; /* Even darker shade on click */
+  }
+  

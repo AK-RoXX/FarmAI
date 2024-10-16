@@ -1,0 +1,133 @@
+.simulation {
+    body, html {
+        margin: 0;
+        padding: 0;
+        font-family: 'Arial', sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+    }
+
+    /* Main wrapper for the simulation and buttons */
+    .simulation-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 95%; /* Increased width to fit more of the land */
+        max-width: 1400px; /* Increase the max width for larger screens */
+        margin-bottom: 20px;
+    }
+
+    /* Farm Simulation Header */
+    .header {
+        font-size: 36px;
+        font-weight: bold;
+        color: #fff;
+        text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+        margin-bottom: 20px;
+        background: linear-gradient(45deg, #FFD700, #FF8C00);
+        border-radius: 10px;
+        padding: 15px;
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        text-align: center;
+        width: 100%; /* Full width header */
+    }
+
+    /* Simulation container styling */
+    .simulation-container {
+        width: 80%; /* Increase width to 80% of the parent wrapper */
+        height: 600px;
+        background-color: rgba(255, 255, 255, 0.9);
+        box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2);
+        border-radius: 15px;
+        border: 3px solid #0072ff;
+        overflow: hidden;
+        position: relative;
+    }
+
+    /* Buttons container styling */
+    .buttons-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: 18%; /* Reduced width for buttons container */
+        height: 600px;
+        gap: 10px;
+        padding-left: 20px;
+    }
+
+    /* Button styling */
+    button {
+        width: 200px;
+        height: 50px;
+        font-size: 16px;
+        font-weight: bold;
+        color: #fff;
+        background: linear-gradient(135deg, #f7971e, #ffd200);
+        border: none;
+        border-radius: 25px;
+        box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.2);
+        transition: all 0.3s ease;
+        cursor: pointer;
+        outline: none;
+        position: relative;
+    }
+
+    button:hover {
+        background: linear-gradient(135deg, #ffd200, #f7971e);
+        box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.3);
+        transform: translateY(-5px);
+    }
+
+    /* Light swipe animation on button */
+    button:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 25px;
+        transform: scaleX(0);
+        transition: transform 0.3s ease;
+        z-index: 0;
+    }
+
+    button span {
+        position: relative;
+        z-index: 1;
+    }
+
+    button:hover:before {
+        transform: scaleX(1);
+    }
+
+    /* Mobile responsiveness */
+    @media screen and (max-width: 900px) {
+        .simulation-wrapper {
+            flex-direction: column;
+            width: 100%;
+        }
+
+        .simulation-container {
+            width: 90%;
+            height: auto;
+        }
+
+        .buttons-container {
+            width: 90%;
+            margin-top: 20px;
+            align-items: center;
+        }
+
+        button {
+            width: 100%;
+        }
+    }
+}
