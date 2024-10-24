@@ -54,7 +54,7 @@ body {
     justify-content: center;
     height: 100vh;
     margin-top: 60px; /* Add margin to avoid overlap with the header */
-    background-image: url('assets/bg.jpg');
+    background-image: url('/assets/bg.jpg');
     background-size: cover; /* Cover the entire area */
     background-position: center;
   }
